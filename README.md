@@ -47,13 +47,7 @@ __all__ = [
 **4. Train model with ODED**
 ####
 ```
-export CONFIG_FILE="./configs/ODED/ODED_fcos.py"
-export WORK_DIR="work_dirs/fcos"
-export GPU_NUM=8
-bash tools/dist_train.sh \
-    ${CONFIG_FILE} \
-    ${GPU_NUM} \
-    --work-dir $WORK_DIR
+python tools/train.py configs/ODED/ODED_faster_rcnn.py --auto-scale-lr  --work-dir work_dirs/
 ```
 **5. Prerequisites**
 ####
